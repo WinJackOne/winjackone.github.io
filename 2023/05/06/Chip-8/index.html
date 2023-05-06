@@ -66,9 +66,7 @@ F(Computer)
     D-->C
     B-->F</pre>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始节点</span><br><span class="line">in=&gt;inputoutput: 输入</span><br><span class="line">e=&gt;end: 结束节点</span><br><span class="line">op=&gt;operation: 操作节点</span><br><span class="line">cond=&gt;condition: 条件节点</span><br><span class="line">sub=&gt;subroutine: 子例程</span><br><span class="line">out=&gt;inputoutput: 输出</span><br><span class="line">st(right)-&gt;in-&gt;op-&gt;cond</span><br><span class="line">cond(yes,right)-&gt;out-&gt;e</span><br><span class="line">cond(no)-&gt;sub</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2><span id="模块介绍">模块介绍</span></h2><h3><span id="bytes-tool">Bytes-tool</span></h3><ul>
+<h3><span id="bytes-tool">Bytes-tool</span></h3><ul>
 <li>功能：提供给其他模块的基本数据类型，以及相关的转换函数</li>
 <li>数据类型：8-bytes, 16-bytes, list, number</li>
 <li>工具函数：所有函数</li>
@@ -100,7 +98,12 @@ F(Computer)
 <p><img src="https://img1.imgtp.com/2023/05/06/DCmvHvhT.png" alt="😎图一"></p>
 <hr>
 <p><img src="https://img1.imgtp.com/2023/05/06/qFTMm5xt.png" alt="图二"></p>
-<h2><span id="方向">方向</span></h2>
+<h2><span id="next">NEXT</span></h2><ul>
+<li>将控制流和数据流分开</li>
+<li>增加scheme解释器，使得模拟器在运行时能修改他的架构</li>
+<li>美化GUI</li>
+</ul>
+
             </div>
         </div>
     </div>
