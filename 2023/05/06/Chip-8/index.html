@@ -1,37 +1,123 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="shortcut icon" href="/" type="image/x-icon" />
+    <title>
+        
+            Chip-8 |
+         
+        Hexo
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
 
+    
 
-{% block content %}
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
-
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<body>
+    <div class="body-container">
+        <div class="header-wrapper"><header>
+    <div class="header-container">
+        <div class="header-menu-list">
+            <ul>
+            
+            </ul>
+        </div>
     </div>
-  </div>
+</header>
+</div>
+        <div class="main-wrapper"><main>
+    <div class="main-container">
+        <div class="post-details">
+            
+            <div class="post-title">
+                <h1>Chip-8</h1>
+            </div>
+            <div class="post-meta">
+                <i class="fa-solid fa-clock"></i>&nbsp;<span class="post-date">2023/05/06</span>
+            </div>
+            
+            <div class="post-content">
+                <p>[TOC]</p>
+<h2><span id="软件调用框架">软件调用框架</span></h2><pre class="mermaid">graph LR
+A(Debuge) 
+B(Keyboard&Screen)
+C(Memory)
+D(Bytes-tools)
+E(CPU)
+F(Computer)
+    B-->E
+    D-->E
+    C-->E
+    F-->A
+    E-->F
+    D-->C
+    B-->F</pre>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+<h2><span id="模块介绍">模块介绍</span></h2><h3><span id="bytes-tool">Bytes-tool</span></h3><ul>
+<li>功能：提供给其他模块的基本数据类型，以及相关的转换函数</li>
+<li>数据类型：8-bytes, 16-bytes, list, number</li>
+<li>工具函数：所有函数</li>
+</ul>
+<h3><span id="memory">Memory</span></h3><ul>
+<li>功能：模拟寄存器，以及RAM</li>
+<li>工具函数：set-register!, register-value, RAM-write, RAM-read</li>
+</ul>
+<h3><span id="keyboardampscreen">Keyboard&amp;Screen</span></h3><ul>
+<li>功能：模拟键盘和屏幕</li>
+<li>工具函数：set-pixel, get-pixel, (send canvas refresh-now), key-board-read, key-pressed?, pressed-key</li>
+</ul>
+<h3><span id="cpu">CPU</span></h3><ul>
+<li>功能：模拟CPU</li>
+<li>数据类型：Ins</li>
+<li>工具函数：CPU</li>
+</ul>
+<h3><span id="computer">Computer</span></h3><ul>
+<li>功能：模拟CHIP-8</li>
+<li>工具函数：CHIP-8, CPU-loop, CHIP-init</li>
+</ul>
+<h3><span id="debuge">Debuge</span></h3><ul>
+<li>功能：Debuge 工具</li>
+<li>工具函数：add-stop, delete-stop, clear-stops, stop?, CPU-restart, CPU-next</li>
+</ul>
+<hr>
+<h2><span id="使用">使用</span></h2><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="built_in">define</span></span> filename pathname)</span><br><span class="line">(<span class="name">CHIP-8</span> filename)</span><br></pre></td></tr></table></figure>
+
+<p>![😎图一](\Chip-8\Screenshot 2023-05-06 110542.png)</p>
+<p>![(❁´◡&#96;❁)](\Chip-8\Screenshot 2023-05-06 110628.png)</p>
+<h2><span id="方向">方向</span></h2>
+            </div>
+        </div>
+    </div>
+</main>
+
+  
+
+</div>
+        <div class="footer-wrapper"><footer>
+    <div class="footer-container">
+        <div class="footer-meta">
+            
+            
+            
+        </div>
+    </div>
+</footer>
+</div>
+    </div>
+</body>
+</html>

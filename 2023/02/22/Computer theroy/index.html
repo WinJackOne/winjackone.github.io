@@ -1,37 +1,77 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="shortcut icon" href="/" type="image/x-icon" />
+    <title>
+        
+            Computer theory |
+         
+        Hexo
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
 
+    
 
-{% block content %}
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
-
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<body>
+    <div class="body-container">
+        <div class="header-wrapper"><header>
+    <div class="header-container">
+        <div class="header-menu-list">
+            <ul>
+            
+            </ul>
+        </div>
     </div>
-  </div>
+</header>
+</div>
+        <div class="main-wrapper"><main>
+    <div class="main-container">
+        <div class="post-details">
+            
+            <div class="post-title">
+                <h1>Computer theory</h1>
+            </div>
+            <div class="post-meta">
+                <i class="fa-solid fa-clock"></i>&nbsp;<span class="post-date">2023/02/22</span>
+            </div>
+            
+            <div class="post-content">
+                <h2 id="introduce"><a href="#introduce" class="headerlink" title="introduce"></a>introduce</h2><p>什么是计算呢！什么问题是可以被计算的，而什么问题是不可以被计算的呢！本篇试图介绍一个关于可计算性的简要描述，在可预见的一两个月里，将持续更新！</p>
+<h2 id="history"><a href="#history" class="headerlink" title="history"></a>history</h2><h2 id="begin"><a href="#begin" class="headerlink" title="begin"></a>begin</h2><p>什么问题是可以被计算的，这是可计算性领域的最初的目的，但文字的描述是不准确的，为此需要对这个问题进行形式化，在这里，”问题”被形式化为一个”函数”，而”可被计算”被形式化为”程序”。最终，”什么问题是可以被计算的”变成了”哪些函数是可以写成程序”。当然，问题是否能够被形式化为函数，而可被计算是否能被形式化为程序，在这种形式化的过程中，有没有丢失一些东西，我认为是肯定的。我们暂且就接受这种形式化的方法。</p>
+<h2 id="question"><a href="#question" class="headerlink" title="question"></a>question</h2><p>可计算性的起源，形式化的正确性。</p>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2>
+            </div>
+        </div>
+    </div>
+</main>
 
-{% endblock %}
+  
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
-
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+</div>
+        <div class="footer-wrapper"><footer>
+    <div class="footer-container">
+        <div class="footer-meta">
+            
+            
+            
+        </div>
+    </div>
+</footer>
+</div>
+    </div>
+</body>
+</html>

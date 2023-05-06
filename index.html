@@ -1,23 +1,104 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="shortcut icon" href="/" type="image/x-icon" />
+    <title>
+         
+        Hexo
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
-{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
 
-{% block content %}
-  <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
-  </section>
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+    
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <div class="body-container">
+        <div class="header-wrapper"><header>
+    <div class="header-container">
+        <div class="header-menu-list">
+            <ul>
+            
+            </ul>
+        </div>
+    </div>
+</header>
+</div>
+        <div class="main-wrapper"><main>
+    <div class="main-container">
+        <div class="post-list">
+            
+            
+                <div class="post-item">
+                    <a href="/2023/05/06/Chip-8/"><span class="post-item-date">2023/05/06</span> Chip-8</a>
+                </div>
+            
+                <div class="post-item">
+                    <a href="/2023/02/22/Computer%20theroy/"><span class="post-item-date">2023/02/22</span> Computer theory</a>
+                </div>
+            
+                <div class="post-item">
+                    <a href="/2023/02/16/%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2/"><span class="post-item-date">2023/02/16</span> 人类简史</a>
+                </div>
+            
+                <div class="post-item">
+                    <a href="/2023/01/12/%E7%90%86%E5%8F%91%E5%B8%88%E6%82%96%E8%AE%BA/"><span class="post-item-date">2023/01/12</span> 理发师悖论</a>
+                </div>
+            
+                <div class="post-item">
+                    <a href="/2022/12/27/CTV/"><span class="post-item-date">2022/12/27</span> CTV</a>
+                </div>
+            
+                <div class="post-item">
+                    <a href="/2022/12/03/CPS/"><span class="post-item-date">2022/12/03</span> CPS变换</a>
+                </div>
+            
+                <div class="post-item">
+                    <a href="/2022/11/26/Mini-GPS/"><span class="post-item-date">2022/11/26</span> Mini-GPS</a>
+                </div>
+            
+                <div class="post-item">
+                    <a href="/2022/11/24/%E6%AD%BB%E4%BA%A1%E9%9A%8F%E6%83%B3/"><span class="post-item-date">2022/11/24</span> 死亡随想</a>
+                </div>
+            
+                <div class="post-item">
+                    <a href="/2022/11/22/221122/"><span class="post-item-date">2022/11/22</span> 221122</a>
+                </div>
+            
+                <div class="post-item">
+                    <a href="/2022/11/01/%E5%AF%B9%E5%9D%90%E6%A0%87%E7%B3%BB%E7%9A%84%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83/"><span class="post-item-date">2022/11/01</span> 对坐标系的简单思考</a>
+                </div>
+            
+                <div class="post-item">
+                    <a href="/2022/10/26/hello-world/"><span class="post-item-date">2022/10/26</span> Hello World</a>
+                </div>
+            
+        </div>
+    </div>
+</main>
+</div>
+        <div class="footer-wrapper"><footer>
+    <div class="footer-container">
+        <div class="footer-meta">
+            
+            
+            
+        </div>
+    </div>
+</footer>
+</div>
+    </div>
+</body>
+</html>

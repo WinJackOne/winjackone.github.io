@@ -1,37 +1,79 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="shortcut icon" href="/" type="image/x-icon" />
+    <title>
+        
+            理发师悖论 |
+         
+        Hexo
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
 
+    
 
-{% block content %}
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
-
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<body>
+    <div class="body-container">
+        <div class="header-wrapper"><header>
+    <div class="header-container">
+        <div class="header-menu-list">
+            <ul>
+            
+            </ul>
+        </div>
     </div>
-  </div>
+</header>
+</div>
+        <div class="main-wrapper"><main>
+    <div class="main-container">
+        <div class="post-details">
+            
+            <div class="post-title">
+                <h1>理发师悖论</h1>
+            </div>
+            <div class="post-meta">
+                <i class="fa-solid fa-clock"></i>&nbsp;<span class="post-date">2023/01/12</span>
+            </div>
+            
+            <div class="post-content">
+                <h2 id="自指"><a href="#自指" class="headerlink" title="自指"></a>自指</h2><p>“理发师只给不给自己理发的人理发，问理发师到底给不给自己理发”，这是一个悖论问题，但接下来关心的目标是为什么产生了这种悖论，先将问题简化为判断“理发师能给自己理发的真假”。为此我写了一个程序：</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="built_in">define</span></span> x-&gt;x?</span><br><span class="line">	(<span class="name"><span class="built_in">lambda</span></span> (n)</span><br><span class="line">		(<span class="name"><span class="built_in">cond</span></span></span><br><span class="line">			((<span class="name"><span class="built_in">=</span></span> n <span class="number">1</span>)</span><br><span class="line">				(<span class="name">to_self</span>))</span><br><span class="line">			((<span class="name"><span class="built_in">=</span></span> n <span class="number">0</span>)</span><br><span class="line">				(<span class="name">not_to_self</span>)))))</span><br><span class="line">(<span class="name"><span class="built_in">define</span></span> to_self</span><br><span class="line">	(<span class="name"><span class="built_in">lambda</span></span> ()</span><br><span class="line">		(<span class="name">x-&gt;x?</span> <span class="number">0</span>)))</span><br><span class="line">(<span class="name"><span class="built_in">define</span></span> not_to_self</span><br><span class="line">	(<span class="name"><span class="built_in">lambda</span></span> ()</span><br><span class="line">		(<span class="name">x-&gt;x?</span> <span class="number">1</span>)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>当需要判断”理发师能给自己理发“，我们输入’(x-&gt;x? 1)’, 可以发现，经过’(to_self)’的推理，最终回到了’(x-&gt;x? 0)’,在经过’(not_to_self)’的推理,最终回到了’(x-&gt;x? 1)’本身。<br>也就是说，对于问题的判断最终回到了对于问题的判断，这样一层一层的递归下去，没有结束的时候，这就是悖论产生的原因。将上述的程序简化更加可以看清悖论产生的本质。</p>
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="built_in">define</span></span> x-&gt;x?</span><br><span class="line">	(<span class="name"><span class="built_in">lambda</span></span> (n)</span><br><span class="line">		(<span class="name"><span class="built_in">cond</span></span> </span><br><span class="line">			((<span class="name"><span class="built_in">=</span></span> n <span class="number">1</span>)</span><br><span class="line">				(<span class="name">x-&gt;x?</span> <span class="number">0</span>))</span><br><span class="line">			((<span class="name"><span class="built_in">=</span></span> n <span class="number">0</span>)</span><br><span class="line">				(<span class="name">x-&gt;x?</span> <span class="number">1</span>)))))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>根据上面，悖论产生的原因，也可以构造一个悖论“a&#x3D;<del>b,b&#x3D;</del>a,问a&#x3D;？”</p>
 
-{% endblock %}
+            </div>
+        </div>
+    </div>
+</main>
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+  
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+</div>
+        <div class="footer-wrapper"><footer>
+    <div class="footer-container">
+        <div class="footer-meta">
+            
+            
+            
+        </div>
+    </div>
+</footer>
+</div>
+    </div>
+</body>
+</html>

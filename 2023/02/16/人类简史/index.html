@@ -1,37 +1,78 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="shortcut icon" href="/" type="image/x-icon" />
+    <title>
+        
+            人类简史 |
+         
+        Hexo
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
+    
+<link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css">
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+    
+<link rel="stylesheet" href="/fontawesome/css/brands.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+    
+<link rel="stylesheet" href="/fontawesome/css/solid.min.css">
 
+    
 
-{% block content %}
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
-
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+<body>
+    <div class="body-container">
+        <div class="header-wrapper"><header>
+    <div class="header-container">
+        <div class="header-menu-list">
+            <ul>
+            
+            </ul>
+        </div>
     </div>
-  </div>
+</header>
+</div>
+        <div class="main-wrapper"><main>
+    <div class="main-container">
+        <div class="post-details">
+            
+            <div class="post-title">
+                <h1>人类简史</h1>
+            </div>
+            <div class="post-meta">
+                <i class="fa-solid fa-clock"></i>&nbsp;<span class="post-date">2023/02/16</span>
+            </div>
+            
+            <div class="post-content">
+                <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>这是一篇关于人类的历史的一个基本框架，从我们当今的节点出发，向着人类的起点前进。</p>
+<h2 id="代"><a href="#代" class="headerlink" title="代"></a>代</h2><p>先介绍一个名词[代],它其实是一个关于过程的名词，代表了一个人从出生到死亡的全部过程，换算成年一百年的时间。<br>在这里想象一下，自己去跨越整个生命过程，从襁褓中第一次睁开眼睛，到小学，青年，中年，老年，至对世界的最后一眼。<br>我希望读者能够体会[代]这个名词中所代表的情感，而不是仅仅将其作为一个时间单位的量词来看待。</p>
+<h2 id="开始我们的旅程"><a href="#开始我们的旅程" class="headerlink" title="开始我们的旅程"></a>开始我们的旅程</h2><p>让我们出发！经过4[代]的过程，我们来到了资本主义出现的时候，再往前1[代]，是启蒙运动，它带给我们新的价值观“人人生而平等”，再往前1[代],是工业革命，这时候的人类第一次认识到物质的力量，再往前2[代],在这过程中，我们将看到帝国的诞生与衰败，是相互征战，是日不落的大英帝国，此时我们到达了离出发地15[代]时，哥伦布发现新大陆，再走60[代]时，我们将看到文明的起源，在两河流域，尼罗河流域，恒河流域，黄河流域，文明诞生，神权，统治与被统治，青铜，在这里交相辉映…待续</p>
+<h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><p>本篇会有很多错漏，但出于搭建框架的目的，并不苛求于具体的细节。</p>
 
-{% endblock %}
+            </div>
+        </div>
+    </div>
+</main>
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+  
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+</div>
+        <div class="footer-wrapper"><footer>
+    <div class="footer-container">
+        <div class="footer-meta">
+            
+            
+            
+        </div>
+    </div>
+</footer>
+</div>
+    </div>
+</body>
+</html>
