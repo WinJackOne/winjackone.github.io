@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2022/10 
+      Chip-8 
       
       
     
@@ -33,6 +33,10 @@
 
 
   
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -94,152 +98,74 @@
 
 
       <div class="main">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="Chip-8">
-        <div class="time-m-d">05-06</div>
-        <div class="title">
-          <a href="/2023/05/06/Chip-8/">
-            
-              <span>Chip-8</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Computer theory">
-        <div class="time-m-d">02-22</div>
-        <div class="title">
-          <a href="/2023/02/22/Computer%20theroy/">
-            
-              <span>Computer theory</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="人类简史">
-        <div class="time-m-d">02-16</div>
-        <div class="title">
-          <a href="/2023/02/16/%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2/">
-            
-              <span>人类简史</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="理发师悖论">
-        <div class="time-m-d">01-12</div>
-        <div class="title">
-          <a href="/2023/01/12/%E7%90%86%E5%8F%91%E5%B8%88%E6%82%96%E8%AE%BA/">
-            
-              <span>理发师悖论</span>
-            
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="CTV">
-        <div class="time-m-d">12-27</div>
-        <div class="title">
-          <a href="/2022/12/27/CTV/">
-            
-              <span>CTV</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CPS变换">
-        <div class="time-m-d">12-03</div>
-        <div class="title">
-          <a href="/2022/12/03/CPS/">
-            
-              <span>CPS变换</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Mini-GPS">
-        <div class="time-m-d">11-26</div>
-        <div class="title">
-          <a href="/2022/11/26/Mini-GPS/">
-            
-              <span>Mini-GPS</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="死亡随想">
-        <div class="time-m-d">11-24</div>
-        <div class="title">
-          <a href="/2022/11/24/%E6%AD%BB%E4%BA%A1%E9%9A%8F%E6%83%B3/">
-            
-              <span>死亡随想</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="221122">
-        <div class="time-m-d">11-22</div>
-        <div class="title">
-          <a href="/2022/11/22/221122/">
-            
-              <span>221122</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="对坐标系的简单思考">
-        <div class="time-m-d">11-01</div>
-        <div class="title">
-          <a href="/2022/11/01/%E5%AF%B9%E5%9D%90%E6%A0%87%E7%B3%BB%E7%9A%84%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83/">
-            
-              <span>对坐标系的简单思考</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Hello World">
-        <div class="time-m-d">10-26</div>
-        <div class="title">
-          <a href="/2022/10/26/hello-world/">
-            
-              <span>Hello World</span>
-            
-          </a>
-        </div>
-      </div>
-    
+<div class="post">
+  <h3 class="date">
+    May 06, 2023
+  </h3>
+  <h1>
+    Chip-8
+  </h1>
+  <div class="content markdown-body">
+    <p>[TOC]</p>
+<h2 id="软件调用框架"><a href="#软件调用框架" class="headerlink" title="软件调用框架"></a>软件调用框架</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A(Debuge) </span><br><span class="line">B(Keyboard&amp;Screen)</span><br><span class="line">C(Memory)</span><br><span class="line">D(Bytes-tools)</span><br><span class="line">E(CPU)</span><br><span class="line">F(Computer)</span><br><span class="line">	B--&gt;E</span><br><span class="line">	D--&gt;E</span><br><span class="line">	C--&gt;E</span><br><span class="line">	F--&gt;A</span><br><span class="line">	E--&gt;F</span><br><span class="line">	D--&gt;C</span><br><span class="line">	B--&gt;F</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="模块介绍"><a href="#模块介绍" class="headerlink" title="模块介绍"></a>模块介绍</h2><h3 id="Bytes-tool"><a href="#Bytes-tool" class="headerlink" title="Bytes-tool"></a>Bytes-tool</h3><ul>
+<li>功能：提供给其他模块的基本数据类型，以及相关的转换函数</li>
+<li>数据类型：8-bytes, 16-bytes, list, number</li>
+<li>工具函数：所有函数</li>
+</ul>
+<h3 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h3><ul>
+<li>功能：模拟寄存器，以及RAM</li>
+<li>工具函数：set-register!, register-value, RAM-write, RAM-read</li>
+</ul>
+<h3 id="Keyboard-amp-Screen"><a href="#Keyboard-amp-Screen" class="headerlink" title="Keyboard&amp;Screen"></a>Keyboard&amp;Screen</h3><ul>
+<li>功能：模拟键盘和屏幕</li>
+<li>工具函数：set-pixel, get-pixel, (send canvas refresh-now), key-board-read, key-pressed?, pressed-key</li>
+</ul>
+<h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><ul>
+<li>功能：模拟CPU</li>
+<li>数据类型：Ins</li>
+<li>工具函数：CPU</li>
+</ul>
+<h3 id="Computer"><a href="#Computer" class="headerlink" title="Computer"></a>Computer</h3><ul>
+<li>功能：模拟CHIP-8</li>
+<li>工具函数：CHIP-8, CPU-loop, CHIP-init</li>
+</ul>
+<h3 id="Debuge"><a href="#Debuge" class="headerlink" title="Debuge"></a>Debuge</h3><ul>
+<li>功能：Debuge 工具</li>
+<li>工具函数：add-stop, delete-stop, clear-stops, stop?, CPU-restart, CPU-next</li>
+</ul>
+<hr>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="built_in">define</span></span> filename pathname)</span><br><span class="line">(<span class="name">CHIP-8</span> filename)</span><br></pre></td></tr></table></figure>
+
+<p>![😎图一](Chip-8\Screenshot 2023-05-06 110542.png)</p>
+<p>![(❁´◡&#96;❁)](Chip-8\Screenshot 2023-05-06 110628.png)</p>
+<h2 id="方向"><a href="#方向" class="headerlink" title="方向"></a>方向</h2>
   </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2023/02/22/Computer%20theroy/">OLDER&nbsp;&gt;</a>
+      
+        
+            
 </div>
-
         <div class="footer">
   
     <div class="footer-more">
