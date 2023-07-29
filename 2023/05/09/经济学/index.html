@@ -5,8 +5,6 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <link rel="shortcut icon" href="/" type="image/x-icon" />
     <title>
-        
-            221122 |
          
         Hexo
     </title>
@@ -43,14 +41,40 @@
         <div class="post-details">
             
             <div class="post-title">
-                <h1>221122</h1>
+                <h1></h1>
             </div>
             <div class="post-meta">
-                <i class="fa-solid fa-clock"></i>&nbsp;<span class="post-date">2022/11/22</span>
+                <i class="fa-solid fa-clock"></i>&nbsp;<span class="post-date">2023/05/09</span>
             </div>
             
             <div class="post-content">
-                <h3 id="有趣的数字"><a href="#有趣的数字" class="headerlink" title="有趣的数字"></a>有趣的数字</h3><p>221122</p>
+                <p>&#96;<pre class="mermaid">stateDiagram-v2</pre></p>
+<pre><code>state 市场&#123;
+    作为商品的人
+    金钱
+    其他产品
+&#125;
+
+state 政府 &#123;
+    信用
+    负债
+&#125;
+
+state 生产单元&#123;
+    生产要素--&gt;组织
+&#125;
+生产单元--&gt;生产单元:更新
+
+
+政府--&gt;生产单元
+生产单元--&gt;政府
+
+政府--&gt;市场
+市场--&gt;政府
+    生产单元--&gt;市场:出售产品
+市场--&gt;生产单元:购买原材料
+</code></pre>
+<p>`</p>
 
             </div>
         </div>
